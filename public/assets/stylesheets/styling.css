@@ -29,3 +29,20 @@ a {
     color: blue;
 }
 
+    img.picture_right
+    {
+      width:120px;
+    }
+    .slider .slide-group .slide-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+    .slider .slide img {
+    height: 130px;
+    }
