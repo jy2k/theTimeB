@@ -12,35 +12,37 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <!-- Include the compiled Ratchet CSS -->
-  <link href="ratchet.css" rel="stylesheet">
+  <link href="/assets/stylesheets/ratchet.min.css" rel="stylesheet">
 
   <!-- Include the compiled Ratchet JS -->
-  <script src="ratchet.js"></script>
+  <script src="/assets/javascripts/ratchet.min.js"></script>
 </head>
 <body>
   <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/home.html"></a>
     <a class="icon icon-compose pull-right"></a>
-    <h1 class="title">Job</h1>
+    <h1 class="title">Add Job</h1>
   </header>
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
+    <div class="content-padded">
 
-    <div class="image-bank" style="text-align:center">
-      <img src="https://i.imgur.com/3EScfGr.jpg">
-  </div>
-    <form class="input-group">
-      <div class="input-row">
-        <label>Email</label>
-        <input type="email" placeholder="example@google.com">
-      </div>
-      <div class="input-row">
-        <label>Password</label>
-        <input type="password" placeholder="*********">
-      </div>
+
+    <form>
+
+      <p>Description</p>
+
+      <textarea rows="5"></textarea>
+            <p>Cost</p>
+            <select>
+        <option value="volvo">1 OriCoin</option>
+        <option value="saab">2 OriCoin</option>
+        <option value="opel">3 OriCoin</option>
+      </select>
+      <button class="btn btn-positive btn-block">Add</button>
+
     </form>
-
-
+  </div>
   </div>
 
 
