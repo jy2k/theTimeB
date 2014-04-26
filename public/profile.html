@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TimeBank Profile</title>
+
+  <!-- Sets initial viewport load and disables zooming  -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css\ratchet.css" rel="stylesheet">
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="js\ratchet.js"></script>
+  <style>
+    img.picture_right
+    {
+      width:120px;
+    }
+    .slider .slide-group .slide-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+    .slider .slide img {
+    height: 130px;
+    }
+  </style>
+</head>
+<body>
+  <header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" href="/index.html"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title">Profile</h1>
+  </header>
+  <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+  <div class="content">
+    <div class="content-padded">
+      <img class="picture_right" align="right" src="profile_pic.jpg">
+      <p>Username: Ori Raz</p>
+      <p>Email: ori.raz@idc.ac.il</p>
+      <p>Country: Israel</p>
+      <p>City: Tel Aviv</p>
+      <hr />
+      <h4>About Me<button class="btn pull-right">
+        <span class="icon icon-edit"></span>
+        Edit
+      </button></h4>
+      <p>I'm a great handy man for any fix that needs to be done in the house. As well I'm great with technology and can be in help for all kind of problems and installations.</p>
+      <h4>Your Video</h4>
+      <button class="btn btn-negative">
+        <span class="icon icon-share"></span>
+        Upload a video
+      </button>
+      <p style="font-size:x-small;">Your video is the best way to show the community what you have to offer.</p>
+      <h4>Gallery</h4>
+      <p style="font-size:x-small;">A picture worth a 1,000 words. Upload photos or portfolio pieces of your work.</p>
+      <div class="slider" id="mySlider">
+        <div class="slide-group">
+          <div class="slide">
+            <img src="toolbelt.jpg">
+            <span class="slide-text">
+              <span class="icon icon-left-nav"></span>
+              Slide
+            </span>
+          </div>
+          <div class="slide">
+            <img src="handyman.jpg">
+          </div>
+          <div class="slide">
+            <img src="handyman2.jpg">
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-negative">Upload</button>
+    </div>
+  </div>
+</body>
+</html>
