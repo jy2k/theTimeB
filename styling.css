@@ -1,0 +1,31 @@
+/* 
+    Document   : index
+    Created on : Apr 23, 2014, 6:05:57 PM
+    Author     : royanai
+    Description:
+        Purpose of the stylesheet follows.
+*/
+h1 { 
+text-align: center;
+font-size: 1.5em;
+background-color: #ccc;
+margin: 20px;
+padding: 40px;
+border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red;
+}
+
+p {
+    color: red;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
