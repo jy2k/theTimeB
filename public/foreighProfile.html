@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TimeBank foreign Profile</title>
+
+  <!-- Sets initial viewport load and disables zooming  -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Include the compiled Ratchet CSS -->
+  <link href="css\ratchet.css" rel="stylesheet">
+
+  <!-- Include the compiled Ratchet JS -->
+  <script src="js\ratchet.js"></script>
+</head>
+<body>
+  <header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" href="/index.html"></a>
+    <a class="icon icon-info pull-right" href="/about_us.html"></a>
+    <h1 class="title">Profile</h1>
+        <nav class="bar bar-tab">
+      <a class="tab-item active" href="/index.html">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Jobs</span>
+      </a>
+
+      <a class="tab-item" href="/manage_tasks.html">
+        <span class="icon icon-pages"></span>
+        <span class="tab-label">Manage jobs</span>
+      </a>
+      <a class="tab-item" href="/profile.html">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Profile</span>
+      </a>
+      <a class="tab-item" href="/add_task.html">
+        <span class="icon icon-plus"></span>
+        <span class="tab-label">Add Task</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+  <div class="content">
+    <div class="content-padded">
+      <img class="picture_right" align="right" src="profile_pic.jpg">
+      <p>Username: Eli Israeli</p>
+      <p>Country: Israel</p>
+      <p>City: Tel Aviv</p>
+      <hr />
+      <h4>About Me<button class="btn pull-right">
+        <span class="icon icon-edit"></span>
+        Edit
+      </button></h4>
+      <p>I am the best dog walker there is. I am very kind to the dogs and love them with all of my heart. You can ask anyone.</p>
+      <h4>Eli's Video</h4>
+      <p></p>
+      <iframe width="560" height="315" src="//www.youtube.com/embed/DeDjoEHGEHY?list=PL09CE956DD08C178F" frameborder="0"></iframe>
+      <p></p>
+      <h4>Gallery</h4>
+      <p style="font-size:x-small;">A picture worth a 1,000 words. Upload photos or portfolio pieces of your work.</p>
+      <div class="slider" id="mySlider">
+        <div class="slide-group">
+          <div class="slide">
+            <img src="toolbelt.jpg">
+            <span class="slide-text">
+              <span class="icon icon-left-nav"></span>
+              Slide
+            </span>
+          </div>
+          <div class="slide">
+            <img src="handyman.jpg">
+          </div>
+          <div class="slide">
+            <img src="handyman2.jpg">
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-negative">Upload</button>
+    </div>
+  </div>
+</body>
+</html>
