@@ -38,7 +38,7 @@
       </a>
       <a class="tab-item" href="/add_task.html">
         <span class="icon icon-plus"></span>
-        <span class="tab-label">Add Task</span>
+        <span class="tab-label">Add Job</span>
       </a>
     </nav>
   </header>
@@ -49,18 +49,7 @@
 
       <form>
 
-        <p>Description</p>
-
-        <textarea rows="5"></textarea>
-        <p>Cost</p>
-        <select>
-          <option value="1">1 OriCoin</option>
-          <option value="2">2 OriCoin</option>
-          <option value="3">3 OriCoin</option>
-          <option value="4">4 OriCoin</option>
-          <option value="5">5 OriCoin</option>
-        </select>
-
+        <p>Type</p>
         <select>
           <option value="walk_dog">Walk dog</option>
           <option value="heavy_lift">Heavy lift</option>
@@ -70,8 +59,24 @@
           <option value="cleaning">House cleaning</option>
           <option value="errand">Run Errand</option>
         </select>
-        <button class="btn btn-positive btn-block">Add</button>
+        
+        <p>Description</p>
 
+        <textarea rows="5"></textarea>
+
+        <p>Cost</p>
+        <select>
+          <option value="1">1 Coins</option>
+          <option value="2">2 Coins</option>
+          <option value="3">3 Coins</option>
+          <option value="4">4 Coins</option>
+          <option value="5">5 Coins</option>
+        </select>
+
+        <hr>
+        <a href="/index.html">
+        <button class="btn btn-positive btn-block" method="post">Add</button>
+      </a>
       </form>
     </div>
   </div>
