@@ -18,24 +18,33 @@
 module.exports = {
   index: function(req, res) {
     Task.find()
-    .done(function(err, tasks) {
-      return res.view({
-        tasks: tasks
+      .done(function(err, tasks) {
+        return res.view({
+          tasks: tasks
+        });
       });
-    });
   },
 
   show: function(req, res) {
     Task.findOne(req.param('id'))
-    .done(function(err, task) {
-      return res.view({
-        task: task
+      .done(function(err, task) {
+        return res.view({
+          task: task
+        });
       });
-    })
   },
 
   new: function(req, res) {
     res.view();
+  },
+
+  edit: function(req, res) {
+    Task.findOne(req.param('id'))
+      .done(function(err, task) {
+        return res.view({
+          task: task
+        });
+      });
   },
 
   /**

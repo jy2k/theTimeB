@@ -16,8 +16,10 @@
  */
 
 module.exports = {
-    
-  
+
+  signup: function(res, req) {
+    req.view();
+  },
 
 
   /**
@@ -26,5 +28,5 @@ module.exports = {
    */
   _config: {}
 
-  
+
 };

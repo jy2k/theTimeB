@@ -100,8 +100,10 @@ module.exports.routes = {
 
   */
   'get /task/new': 'TaskController.new',
+  'get /task/edit/:id': 'TaskController.edit',
   'get /task/:id': 'TaskController.show',
-  'get /profile/tasks': 'ProfileController.tasks'
+  'get /profile/tasks': 'ProfileController.tasks',
+  'get /signup': 'AuthController.signup'
 };
 
 
