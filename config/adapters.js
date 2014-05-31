@@ -17,6 +17,6 @@
 
    mongo: {
      module: 'sails-mongo',
-     url: process.env.MONGOLAB_URI || 'mongodb://localhost:27017/thetimebank'
+     url: process.env.MONGOHQ_URL || 'mongodb://localhost:27017/thetimebank'
    }
  };
