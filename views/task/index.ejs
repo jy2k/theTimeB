@@ -1,0 +1,40 @@
+  <!-- Make sure all your bars are the first things in your <body> -->
+  <header class="bar bar-nav">
+    <h1 class="title">JOBS</h1>
+    <nav class="bar bar-tab">
+      <a class="tab-item active" href="/task">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Jobs</span>
+      </a>
+
+      <a class="tab-item" href="/profile/tasks">
+        <span class="icon icon-pages"></span>
+        <span class="tab-label">Manage jobs</span>
+      </a>
+      <a class="tab-item" href="/profile">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Profile</span>
+      </a>
+      <a class="tab-item" href="/task/new">
+        <span class="icon icon-plus"></span>
+        <span class="tab-label">Add Task</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+  <div class="content">
+   <ul class="table-view">
+  <% for(var i = 0; i < tasks.length; i++) { %>
+    <li class="table-view-cell media">
+      <a class="navigate-right" href="/task/<%= tasks[i].id %>">
+        <img class="media-object pull-left" src="https://i.imgur.com/Fl98gHq.png" width="42px" height="42px">
+        <div class="media-body">
+          Item <%= i %>
+          <p><%= tasks[i].description %></p>
+        </div>
+      </a>
+    </li>
+  <% } %>
+  </ul>
+</div>

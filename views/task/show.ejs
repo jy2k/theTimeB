@@ -1,0 +1,35 @@
+  <header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" href="/task"></a>
+    <a class="icon icon-compose pull-right"></a>
+    <h1 class="title">Job</h1>
+  </header>
+  <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+  <div class="content">
+    <div class="content-padded">
+      <p>
+        <strong>
+          Offered by
+        </strong>
+      </p>
+      <p>
+       <USER NAME SHOULD GO HERE>
+     </p>
+     <p>
+      <strong>
+        Description
+      </strong>
+    </p>
+    <p>
+      <%= task.description %>
+    </p>
+    <p>
+      <strong>
+        Cost
+      </strong>
+    </p>
+    <p>
+      <%= task.cost %> OriCoins
+    </p>
+    <button class="btn btn-positive btn-block">Purchase</button>
+  </div>
+</div>

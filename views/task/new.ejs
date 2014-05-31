@@ -1,0 +1,64 @@
+<header class="bar bar-nav">
+  <a class="icon icon-left-nav pull-left" href="/"></a>
+  <a class="icon icon-info pull-right" href="/about"></a>
+  <h1 class="title">Add Job</h1>
+  <nav class="bar bar-tab">
+    <a class="tab-item active" href="/task">
+      <span class="icon icon-search"></span>
+      <span class="tab-label">Jobs</span>
+    </a>
+
+    <a class="tab-item" href="/profile/tasks">
+      <span class="icon icon-pages"></span>
+      <span class="tab-label">Manage jobs</span>
+    </a>
+    <a class="tab-item" href="/profile">
+      <span class="icon icon-person"></span>
+      <span class="tab-label">Profile</span>
+    </a>
+    <a class="tab-item" href="/task/new">
+      <span class="icon icon-plus"></span>
+      <span class="tab-label">Add Job</span>
+    </a>
+    <a class="tab-item" href="/chat">
+      <span class="icon icon-list"></span>
+      <span class="tab-label">Chat</span>
+    </a>
+  </nav>
+</header>
+<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+<div class="content">
+  <div class="content-padded">
+
+
+    <form action="/task/create" method="post">
+
+      <p>Type</p>
+      <select name="type">
+        <option value="walk_dog">Walk dog</option>
+        <option value="heavy_lift">Heavy lift</option>
+        <option value="cook_food">Cook Food</option>
+        <option value="gradening">Gardening</option>
+        <option value="massage">Massage</option>
+        <option value="cleaning">House cleaning</option>
+        <option value="errand">Run Errand</option>
+      </select>
+
+      <p>Description</p>
+
+      <textarea name="description" rows="5"></textarea>
+
+      <p>Cost</p>
+      <select name="cost">
+        <option value="1">1 Coins</option>
+        <option value="2">2 Coins</option>
+        <option value="3">3 Coins</option>
+        <option value="4">4 Coins</option>
+        <option value="5">5 Coins</option>
+      </select>
+
+      <hr>
+      <input type="submit" class="btn btn-positive btn-block" value="Add"/>
+    </form>
+  </div>
+</div>
