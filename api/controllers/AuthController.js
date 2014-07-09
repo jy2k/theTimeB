@@ -14,19 +14,34 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-
+// Location: /api/controllers/AuthController.js
+var passport = require("passport");
 module.exports = {
-
   signup: function(res, req) {
     req.view();
   },
 
+  login: function(req,res){
+    res.view("auth/login");
+  },
 
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to AuthController)
-   */
+  process: function(req,res){
+    passport.authenticate('local', function(err, user, info){
+      if ((err) || (!user)) {
+        res.redirect('/login');
+        return;
+      }
+      req.logIn(user, function(err){
+        if (err) res.redirect('/login');
+        return res.redirect('/tasks');
+      });
+    })(req, res);
+  },
+
+  logout: function (req,res){
+    req.logout();
+    res.send('logout successful');
+  },
   _config: {}
-
-
 };
+
