@@ -47,6 +47,12 @@ module.exports = {
       });
   },
 
+  create: function(req, res) {
+    Task.create()
+      .done(function(err, result){
+        return res.redirect('/tasks')
+    });
+  },
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to TaskController)

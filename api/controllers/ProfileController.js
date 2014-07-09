@@ -24,6 +24,11 @@ module.exports = {
     res.view('profile/tasks/index');
   },
 
+  show: function(req, res) {
+    res.view();
+  },
+
+
 
   /**
    * Overrides for the settings in `config/controllers.js`
