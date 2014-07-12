@@ -26,7 +26,6 @@
       </a>
     </nav>
   </header>
-  <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
     <div class="segmented-control">
       <a class="control-item active" href="#item1mobile">
@@ -37,65 +36,34 @@
       </a>
     </div>
     <div class="card">
-      <!-- This is the first card -->
       <div id="item1mobile" class="control-content active">
         <ul class="table-view">
-          <!-- This is where we add the items -->
-           <% for(var i = 0; i < tasks.length; i++) { %>
+           <% for(var i = 0; i < offeredTasks.length; i++) { %>
             <li class="table-view-cell media">
-              <a class="navigate-right" href="/task/<%= tasks[i].id %>">
+              <a class="navigate-right" href="/task/<%= offeredTasks[i].id %>">
                 <img class="media-object pull-left" src="https://i.imgur.com/Fl98gHq.png" width="42px" height="42px">
                 <div class="media-body">
                   Item <%= i %>
-                  <p><%= tasks[i].description %></p>
+                  <p><%= offeredTasks[i].description %></p>
                 </div>
               </a>
             </li>
           <% } %>
-
-          <li class="table-view-cell media">
-            <a class="navigate-right" href="/task">
-              <img class="media-object pull-left" src="http://parsonslumber.com/home/parsons/images/small_moving_boxes.jpg" width="42px" height="42px">
-              <div class="media-body">
-                Heavy Lifting
-                <p>Young dude will help move some furniture around the house</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-cell media">
-            <a class="navigate-right" href="/task">
-              <img class="media-object pull-left" src="http://www.puplistings.com/dog-articles/files/image/dog-walking-on-leash.jpg" width="42px" height="42px">
-              <div class="media-body">
-                Walk Dog
-                <p>Cool friendly neighbour willing to walk your dog alongside mine</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-cell media">
-            <a class="navigate-right" href="/task">
-              <img class="media-object pull-left" src="http://www.seattleorganicrestaurants.com/vegan-whole-foods/images/Food-Guidelines.jpg" width="42px" height="42px">
-              <div class="media-body">
-                Cook Food
-                <p>Retired lady with great cooking skills!</p>
-              </div>
-            </a>
-          </li>
-
         </ul>
       </div>
-      <!-- This is the second card -->
       <div id="item2mobile" class="control-content">
        <ul class="table-view">
-                  <li class="table-view-cell media">
-            <a class="navigate-right" href="/task">
-              <img class="media-object pull-left" src="http://www.puplistings.com/dog-articles/files/image/dog-walking-on-leash.jpg" width="42px" height="42px">
-              <div class="media-body">
-                Walk Dog
-                <p>Cool friendly neighbour willing to walk your dog alongside mine</p>
-              </div>
-            </a>
-          </li>
-
+        <% for(var i = 0; i < purchasedTasks.length; i++) { %>
+         <li class="table-view-cell media">
+           <a class="navigate-right" href="/task/<%= purchasedTasks[i].id %>">
+             <img class="media-object pull-left" src="https://i.imgur.com/Fl98gHq.png" width="42px" height="42px">
+             <div class="media-body">
+               Item <%= i %>
+               <p><%= purchasedTasks[i].description %></p>
+             </div>
+           </a>
+         </li>
+       <% } %>
       </ul>
     </div>
   </div>
