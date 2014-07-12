@@ -23,6 +23,27 @@ module.exports = {
       float: true,
       defaultsTo: 0
     },
+    fullName: {
+      type: 'string',
+      required: true
+    },
+    age: {
+      type: 'integer',
+      required: true
+    },
+    email: {
+      type: 'email',
+      required: true,
+      unique: true
+    },
+    address: {
+      type: 'string',
+      required: true
+    },
+    phone: {
+      type: 'string',
+      required: true,
+    }
 
     //Override toJSON method to remove password from API
     toJSON: function() {
