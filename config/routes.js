@@ -99,19 +99,21 @@ module.exports.routes = {
   'get /*(^.*)': 'UserController.profile'
 
   */
-  'get /task/new': 'TaskController.new',
-  'get /tasks': 'TaskController.index',
-  'get /task/edit/:id': 'TaskController.edit',
-  'get /task/:id': 'TaskController.show',
+  'get /task/new':           'TaskController.new',
+  'get /tasks':              'TaskController.index',
+  'get /task/edit/:id':      'TaskController.edit',
+  'get /task/:id':           'TaskController.show',
   'post /task/:id/purchase': 'TaskController.purchase',
 
-  'get /user/tasks': 'UserController.tasks',
-  'get /user/:id': 'UserController.show',
+  'get /user/tasks':         'UserController.tasks',
+  'get /user/edit':          'UserController.edit',
+  'get /user':               'UserController.index',
+  'get /user/:id':           'UserController.show',
 
-  'get /signup': 'AuthController.signup',
-  'get /login': "AuthController.login",
-  'post /login': 'AuthController.process',
-  'get /logout': 'AuthController.logout',
+  'get /signup':             'AuthController.signup',
+  'get /login':              'AuthController.login',
+  'post /login':             'AuthController.process',
+  'get /logout':             'AuthController.logout',
 };
 
 

@@ -55,8 +55,9 @@ module.exports = {
     res.view();
   },
 
-
-
+  edit: function(req, res) {
+    res.view();
+  },
 
   /**
    * Overrides for the settings in `config/controllers.js`

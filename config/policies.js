@@ -20,7 +20,7 @@ module.exports.policies = {
   '*': true,
 
   UserController: {
-    "tasks": 'authenticated',
+    "*": 'authenticated',
   },
   AuthController: {
     '*': true,
