@@ -1,6 +1,8 @@
   <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/task"></a>
-    <a class="icon icon-compose pull-right" href="/task/edit/<%= task.id %>"></a>
+    <% if (req.user[0].id === task.userOwner) { %>
+      <a class="icon icon-compose pull-right" href="/task/edit/<%= task.id %>" data-ignore="push"></a>
+    <% } %>
     <h1 class="title">Task</h1>
   </header>
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->

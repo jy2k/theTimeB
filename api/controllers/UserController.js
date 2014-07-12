@@ -41,7 +41,7 @@ module.exports = {
       })
       .done(function(err, tasks) {
         var sortedTasks = _.groupBy(tasks, function(obj) {
-            return (obj.userOwner === req.user.id ? 'offered' : 'purchased');
+            return (obj.userOwner === req.user[0].id ? 'offered' : 'purchased');
           });
 
         res.view('user/tasks/index', {
@@ -49,6 +49,16 @@ module.exports = {
           purchasedTasks: sortedTasks['purchased'] || []
         })
       });
+  },
+
+  create: function(req, res) {
+    User.create(req.body).done(function(err, user) {
+      if (err) {
+        console.log(err);
+      }
+
+      return res.redirect('/tasks');
+    });
   },
 
   show: function(req, res) {
