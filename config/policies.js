@@ -20,7 +20,10 @@ module.exports.policies = {
   '*': true,
 
   UserController: {
-    "*": 'authenticated',
+    'index': 'authenticated',
+    'tasks': 'authenticated',
+    'show': 'authenticated',
+    'edit': 'authenticated'
   },
   AuthController: {
     '*': true,

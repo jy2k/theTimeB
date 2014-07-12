@@ -43,7 +43,7 @@ module.exports = {
     phone: {
       type: 'string',
       required: true,
-    }
+    },
 
     //Override toJSON method to remove password from API
     toJSON: function() {

@@ -4,45 +4,23 @@
 </header>
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
-
-    <script>
-      function validateForm() {
-        var user = document.forms["loginForm"]["username"].value;
-        var password = document.forms["loginForm"]["password"].value;
-
-        var atpos = user.indexOf("@");
-        var dotpos = user.lastIndexOf(".");
-        
-        if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-            alert("Not a valid e-mail address");
-            return false;
-        }
-        
-        if (password == null || password == "") {
-        alert("First name must be filled out");
-        return false;
-        }
-    }
-
-    </script>
-
-    <div class="media-object" align="center">
+   <div class="media-object" align="center">
       <img src="http://1.bp.blogspot.com/-WiG3eTSY3Ro/UoJw30z7jII/AAAAAAAACtU/B_yy22RMQQ4/s72-c/time-bank.png">
     </div>
-    <form  name="loginForm" class="input-group" action="/login" method="post" onsubmit="return validateForm();">
+    <form  name="loginForm" class="input-group" action="/login" method="post">
       <div class="input-row">
         <label>Email</label>
-        <input type="text" name="username" placeholder="example@google.com"/>
+        <input type="email" name="username" placeholder="example@google.com" required="required"/>
       </div>
       <div class="input-row">
         <label>Password</label>
-        <input type="password" name="password" placeholder="*********"/>
+        <input type="password" name="password" placeholder="*********"  required="required"/>
       </div>
-      <input type="submit" value="Log In" class="btn btn-primary btn-block"/>
+      <input type="submit" value="Log In" class="btn btn-primary btn-block btn-login"/>
     </form>
 
     <p align="center">
-      <a href="/signup" >
+      <a href="/signup" data-ignore="push">
         SIGN UP TODAY!
       </a>
     </p>

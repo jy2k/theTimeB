@@ -1,11 +1,33 @@
 <header class="bar bar-nav">
   <a class="icon icon-left-nav pull-left" href="/tasks"></a>
   <h1 class="title">Chat</h1>
+  <nav class="bar bar-tab">
+    <a class="tab-item" href="/task">
+      <span class="icon icon-search"></span>
+      <span class="tab-label">Tasks</span>
+    </a>
+    <a class="tab-item" href="/user/tasks">
+      <span class="icon icon-pages"></span>
+      <span class="tab-label">Manage Tasks</span>
+    </a>
+    <a class="tab-item" href="/user">
+      <span class="icon icon-person"></span>
+      <span class="tab-label">Profile</span>
+    </a>
+    <a class="tab-item" href="/task/new">
+      <span class="icon icon-plus"></span>
+      <span class="tab-label">Add Task</span>
+    </a>
+    <a class="tab-item active" href="/chat" data-ignore="push">
+      <span class="icon icon-list"></span>
+      <span class="tab-label">Chat</span>
+    </a>
+  </nav>
 </header>
+
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
 <div class="content padded">
-
   <div id="disqus_thread"></div>
   <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -20,6 +42,5 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
   </div>
 </div>

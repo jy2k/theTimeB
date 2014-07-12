@@ -1,11 +1,4 @@
-/* 
-Document   : index
-Created on : Apr 23, 2014, 6:05:57 PM
-Author     : royanai
-Description:
-Purpose of the stylesheet follows.
-*/
-h1 { 
+/*h1 {
     text-align: center;
     font-size: 1.5em;
     background-color: #ccc;
@@ -45,4 +38,8 @@ img.picture_right
 }
 .slider .slide img {
     height: 130px;
+}*/
+
+.btn-login {
+  background-color: #428bca !important;
 }
