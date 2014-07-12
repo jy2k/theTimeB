@@ -10,10 +10,10 @@ module.exports = {
 
   attributes: {
     userOwner: 'STRING',
-    description: 'TEXT',
+    userPurchased: 'STRING',
     type: 'STRING',
-    cost: 'FLOAT',
-    userPurchased: 'STRING'
+    description: 'TEXT',
+    cost: 'FLOAT'
   }
 
 };

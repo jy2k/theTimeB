@@ -15,6 +15,8 @@
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
 
+var _ = require('underscore');
+
 module.exports = {
   index: function(req, res) {
     Task.find()
@@ -48,12 +50,30 @@ module.exports = {
   },
 
   create: function(req, res) {
-    Task.create()
+    Task.create(
+        _.extend(req.body, {
+          userOwner: req.user[0].id
+        })
+      )
       .done(function(err, result){
         return res.redirect('/tasks')
     });
   },
-  
+
+  purchase: function(req, res) {
+    Task.findOne(req.param('id'))
+    .done(function(err, task) {
+      TransactionService.transact(req.user[0].id, task.userOwner, task.cost).done(function(response) {
+        if (response) {
+          return res.redirect('/tasks');
+        }
+        else {
+          res.redirect('/task/' + task.id);
+        }
+      });
+    });
+  },
+
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to TaskController)

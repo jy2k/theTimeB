@@ -18,6 +18,11 @@ module.exports = {
       type: 'string',
       required: true
     },
+    balance: {
+      type: 'float',
+      float: true,
+      defaultsTo: 0
+    },
 
     //Override toJSON method to remove password from API
     toJSON: function() {
@@ -40,6 +45,18 @@ module.exports = {
           cb(null, user);
         }
       });
+    });
+  },
+
+  afterCreate: function(user, cb) {
+    User.update({ id: user.id }, { balance: 0 }, function(err, user) {
+      if (err) {
+        console.log(err);
+        cb(err);
+      }
+      else {
+        cb(null, user);
+      }
     });
   }
 };

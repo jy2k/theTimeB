@@ -103,7 +103,8 @@ module.exports.routes = {
   'get /tasks': 'TaskController.index',
   'get /task/edit/:id': 'TaskController.edit',
   'get /task/:id': 'TaskController.show',
-  
+  'post /task/:id/purchase': 'TaskController.purchase',
+
   'get /user/tasks': 'UserController.tasks',
   'get /user/:id': 'UserController.show',
 
