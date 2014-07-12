@@ -36,14 +36,15 @@
     </div>
     <div class="card">
       <div id="item1mobile" class="control-content active">
-      <form method="post" action="/tasks/destroy_all">
+      <form method="post" action="/tasks/destroy_all" class="js-destroy-all">
         <button class="btn btn-primary btn-block">Delete All Offered Tasks</button>
       </form>
-        
+      <script type="text/javascript" src="/js/tasks.new.js"></script>
+
         <ul class="table-view">
            <% for(var i = 0; i < offeredTasks.length; i++) { %>
             <li class="table-view-cell media">
-              
+
                 <img class="media-object pull-left" src="https://i.imgur.com/Fl98gHq.png" width="42px" height="42px">
                 <div class="media-body">
                   Item <%= i %>
@@ -52,7 +53,7 @@
                 <p>
               <span>
                 <a class="icon icon-close" href="/task/destroy/<%= offeredTasks[i].id %>">
-                </a>                
+                </a>
               </span>
               <a class="navigate-right" href="/task/<%= offeredTasks[i].id %>"></a>
             </p>
