@@ -16,7 +16,25 @@
  */
 
 module.exports = {
-    
+  index: function(req, res) {
+    Task.find()
+      .where({ userOwner: req.user.id })
+      .where({ userPurchased: req.user.id})
+      .done(function(err, tasks) {
+        return res.view({
+          tasks: tasks
+        });
+      });
+  },
+
+  tasks: function(req, res) {
+    res.view('/user/tasks/index');
+  },
+
+  show: function(req, res) {
+    res.view();
+  },
+
   
 
 

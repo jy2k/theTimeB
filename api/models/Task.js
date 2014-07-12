@@ -9,9 +9,11 @@
 module.exports = {
 
   attributes: {
-    userId: 'STRING',
+    userOwner: 'STRING',
     description: 'TEXT',
-    cost: 'FLOAT'
+    type: 'STRING',
+    cost: 'FLOAT',
+    userPurchased: 'STRING'
   }
 
 };

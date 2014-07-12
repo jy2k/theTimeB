@@ -6,42 +6,46 @@
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
     <div class="content-padded">
-    <form class="input-group">
+    <form class="input-group" action="/user/create" method="post">
+      <div class="input-row">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="YourUsername">
+      </div>
+      <div class="input-row">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="**********">
+      </div>
       <div class="input-row">
         <label>Full name</label>
-        <input type="text" placeholder="Your Name">
+        <input type="text" name="fullName"placeholder="Your Name">
       </div>
       <div class="input-row">
         <label>Age</label>
-        <input type="number">
+        <input type="number" name="age">
       </div>
       <div class="input-row">
         <label>Email</label>
-        <input type="email" placeholder="example@email.com">
+        <input type="email" name="email" placeholder="example@email.com">
       </div>
       <div class="input-row">
         <label>Repeat Email</label>
-        <input type="email" placeholder="example@email.com">
-      </div>
-      <div class="input-row">
-        <label>Username</label>
-        <input type="text" placeholder="YourUsername">
+        <input type="email" name="repeatEmail" placeholder="example@email.com">
       </div>
       <div class="input-row">
         <label>Country</label>
-        <input type="text">
+        <input type="text" name="country">
       </div>
       <div class="input-row">
         <label>City</label>
-        <input type="text">
+        <input type="text" name="city">
       </div>
       <div class="input-row">
         <label>Zip Code</label>
-        <input type="number">
+        <input type="number" name="zipCode">
       </div>
       <div class="input-row">
         <label>Phone</label>
-        <input type="number" placeholder="+1-234-567-8900">
+        <input type="number"  name="phone" placeholder="+1-234-567-8900">
       </div>
       <br>
       <a href="/tasks">

@@ -25,7 +25,7 @@ module.exports.policies = {
     '*': true,
   },
    TaskController: {
-    '*': 'isAuthenticated',
+    '*': 'authenticated',
   }
   /*
 	// Here's an example of adding some policies to a controller

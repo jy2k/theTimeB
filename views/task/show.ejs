@@ -1,7 +1,7 @@
   <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/task"></a>
     <a class="icon icon-compose pull-right" href="/task/edit/<%= task.id %>"></a>
-    <h1 class="title">Job</h1>
+    <h1 class="title">Task</h1>
   </header>
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
@@ -12,7 +12,7 @@
         </strong>
       </p>
       <p>
-       <USER NAME SHOULD GO HERE>
+       <%= task.userProposed %>
      </p>
      <p>
       <strong>

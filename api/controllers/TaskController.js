@@ -53,6 +53,7 @@ module.exports = {
         return res.redirect('/tasks')
     });
   },
+  
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to TaskController)

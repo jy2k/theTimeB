@@ -104,8 +104,8 @@ module.exports.routes = {
   'get /task/edit/:id': 'TaskController.edit',
   'get /task/:id': 'TaskController.show',
   
-  'get /profile/tasks': 'ProfileController.tasks',
-  'get /profile/:id': 'ProfileController.show',
+  'get /user/tasks': 'UserController.tasks',
+  'get /user/:id': 'UserController.show',
 
   'get /signup': 'AuthController.signup',
   'get /login': "AuthController.login",
