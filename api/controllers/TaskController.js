@@ -74,6 +74,20 @@ module.exports = {
     });
   },
 
+  destroy: function(req, res) {
+    Task.destroy({ id : req.param('id')})
+    .done(function(err) {
+        res.redirect('/user/tasks');
+    });
+  },
+
+  destroy_all: function(req, res) {
+    Task.destroy()
+    .done(function(err) {
+        res.redirect('/user/tasks');
+    });
+  },
+
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to TaskController)
