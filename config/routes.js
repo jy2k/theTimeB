@@ -104,8 +104,8 @@ module.exports.routes = {
   'get /task/edit/:id':      'TaskController.edit',
   'get /task/:id':           'TaskController.show',
   'post /task/:id/purchase': 'TaskController.purchase',
-  'delete /task/destroy/:id':  'TaskController.destroy',
-  'delete /tasks/destroy_all': 'TaskController.destroy_all',
+  'post /task/destroy/:id':  'TaskController.destroy',
+  'post /tasks/destroy_all': 'TaskController.destroy_all',
 
   'get /user/tasks':         'UserController.tasks',
   'get /user/edit':          'UserController.edit',

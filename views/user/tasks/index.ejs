@@ -15,11 +15,11 @@
         <span class="icon icon-person"></span>
         <span class="tab-label">Profile</span>
       </a>
-      <a class="tab-item" href="/add_task">
+      <a class="tab-item" href="/task/new">
         <span class="icon icon-plus"></span>
         <span class="tab-label">Add Task</span>
       </a>
-      <a class="tab-item" href="/disqus" data-ignore="push">
+      <a class="tab-item" href="/chat" data-ignore="push">
         <span class="icon icon-list"></span>
         <span class="tab-label">Chat</span>
       </a>
@@ -36,7 +36,7 @@
     </div>
     <div class="card">
       <div id="item1mobile" class="control-content active">
-      <form method="post" action="/tasks/destroy_all" class="js-destroy-all">
+      <form method="post" action="/tasks/destroy_all" class="js-destroy-all" data-ignore="push">
         <button class="btn btn-primary btn-block">Delete All Offered Tasks</button>
       </form>
       <script type="text/javascript" src="/js/tasks.new.js"></script>

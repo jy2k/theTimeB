@@ -6,7 +6,7 @@
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
     <div class="content-padded">
-    <form class="input-group" action="/user/create" method="post">
+    <form class="input-group" action="/user/create" method="post" data-ignore="push">
       <div class="input-row">
         <label>Username</label>
         <input type="text" name="username" placeholder="Your Username" required="required">
@@ -36,7 +36,7 @@
         <input type="number"  name="phone" placeholder="+1-234-567-8900" required="required">
       </div>
       <br>
-      <button class="btn btn-primary btn-block" type="submit">Submit</button>
+      <button class="btn btn-primary btn-block" type="submit" data-ignore="push">Submit</button>
     </form>
   </div>
 </div>
