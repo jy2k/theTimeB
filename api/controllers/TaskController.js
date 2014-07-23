@@ -52,7 +52,7 @@ module.exports = {
   create: function(req, res) {
     Task.create(
         _.extend(req.body, {
-          userOwner: req.user[0].username
+          userOwner: req.user[0].id
         })
       )
       .done(function(err, result){
@@ -63,7 +63,10 @@ module.exports = {
   purchase: function(req, res) {
     Task.findOne(req.param('id'))
     .done(function(err, task) {
-      TransactionService.transact(req.user[0].id, task.userOwner, task.cost).done(function(response) {
+      User.find()
+        .where({ id: task.userOwner})
+        .done(function(err, user) {
+        TransactionService.transact(req.user[0].id, user.id, task.cost).done(function(response) {
         if (response) {
           return res.redirect('/tasks');
         }
@@ -71,6 +74,8 @@ module.exports = {
           res.redirect('/task/' + task.id);
         }
       });
+      });
+
     });
   },
 
