@@ -70,7 +70,7 @@ module.exports = {
   },
 
   afterCreate: function(user, cb) {
-    User.update({ id: user.id }, { balance: 0 }, function(err, user) {
+    User.update({ id: user.id }, { balance: 1000 }, function(err, user) {
       if (err) {
         console.log(err);
         cb(err);

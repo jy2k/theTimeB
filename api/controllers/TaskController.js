@@ -52,7 +52,7 @@ module.exports = {
   create: function(req, res) {
     Task.create(
         _.extend(req.body, {
-          userOwner: req.user[0].id
+          userOwner: req.user[0].username
         })
       )
       .done(function(err, result){
