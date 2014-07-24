@@ -7,6 +7,84 @@
   </header>
   <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
   <div class="content">
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      function insertToSQL() {
+          var name = document.getElementById("userOwner").value;
+          console.log(name);
+          // Yanai insert the code here - GOOD LUCK!
+           // Creating database
+          var database = openDatabase('db', '1.0', 'thetimebankdb', 2*1024*1024);
+
+
+                  database.transaction(
+            function( transaction ){
+ 
+                // Create our girls table if it doesn't exist.
+                transaction.executeSql(
+                    "CREATE TABLE IF NOT EXISTS girls (" +
+                        "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                        "name TEXT NOT NULL" +
+                    ");"
+                );
+
+                saveGirl(name, null);
+ 
+            }
+        );
+ 
+ 
+        // -------------------------------------------------- //
+        // -------------------------------------------------- //
+ 
+ 
+        // Now that we have our database table created, let's
+        // create some "service" functions that we can use to
+        // touch the girls (no, not in that way - perv).
+ 
+        // NOTE: Since SQLite database interactions are performed
+        // asynchronously by default (it seems), we have to provide
+        // callbacks to execute when the results are available.
+ 
+ 
+        // I save a girl.
+        var saveGirl = function( name, callback ){
+            // Insert a new girl.
+            database.transaction(
+                function( transaction ){
+ 
+                    // Insert a new girl with the given values.
+                    transaction.executeSql(
+                        (
+                            "INSERT INTO girls (" +
+                                "name " +
+                            " ) VALUES ( " +
+                                "? " +
+                            ");"
+                        ),
+                        [
+                            name
+                        ],
+                        function( transaction, results ){
+                            // Execute the success callback,
+                            // passing back the newly created ID.
+                            callback( results.insertId );
+                        }
+                    );
+ 
+                }
+            );
+        };
+
+      
+      }
+    
+    $("#purchase").click(insertToSQL);
+  });
+  </script>
+
     <div class="content-padded">
       <p>
         <strong>
@@ -34,7 +112,8 @@
     </p>
     <% if (req.user[0].id !== task.userOwner) { %>
       <form method="post" action="/task/<%= task.id %>/purchase">
-        <button class="btn btn-positive btn-block">Purchase</button>
+        <input type="hidden" value="<%= task.userOwner%>" id="userOwner"/>
+        <input class="btn btn-positive btn-block" type="submit" value="Purchase" id="purchase"/>
       </form>
     <% } %>
   </div>

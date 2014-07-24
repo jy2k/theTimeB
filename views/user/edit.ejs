@@ -4,7 +4,7 @@
   </header>
   <div class="content">
     <div class="content-padded">
-    <form class="input-group" action="/user/update/<%= req.user[0].id %>" method="post">
+    <form action="/user/update/<%= req.user[0].id %>" method="post" class="js-user-edit-form">
       <div class="input-row">
         <label>Username</label>
         <input type="text" name="username" placeholder="YourUsername" value="<%= req.user[0].username %>">
@@ -33,4 +33,5 @@
       <button class="btn btn-primary btn-block" type="submit">Update</button>
     </form>
   </div>
+  <script type="text/javascript" src="/js/users.edit.js"></script>
 </div>

@@ -66,7 +66,12 @@ module.exports = {
   },
 
   edit: function(req, res) {
-    res.view();
+    User.findOne(req.user.id)
+      .done(function(err, user) {
+        return res.view({
+          user: user
+        });
+      });
   },
 
   /**

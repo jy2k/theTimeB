@@ -30,7 +30,7 @@
    <ul class="table-view">
   <% for(var i = 0; i < tasks.length; i++) { %>
     <li class="table-view-cell media">
-      <a class="navigate-right" href="/task/<%= tasks[i].id %>">
+      <a class="navigate-right" href="/task/<%= tasks[i].id %>" data-ignore="push">
         <img class="media-object pull-left" src="https://i.imgur.com/Fl98gHq.png" width="42px" height="42px">
         <div class="media-body">
           <%= tasks[i].userOwner %>
