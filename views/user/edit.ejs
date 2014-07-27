@@ -6,8 +6,8 @@
     <div class="content-padded">
     <form action="/user/update/<%= req.user[0].id %>" method="post" class="js-user-edit-form">
       <div class="input-row">
-        <label>Username</label>
-        <input type="text" name="username" placeholder="YourUsername" value="<%= req.user[0].username %>">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="example@email.com" value="<%= req.user[0].email %>">
       </div>
       <div class="input-row">
         <label>Full name</label>
@@ -16,10 +16,6 @@
       <div class="input-row">
         <label>Age</label>
         <input type="number" name="age" value="<%= req.user[0].age %>">
-      </div>
-      <div class="input-row">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="example@email.com" value="<%= req.user[0].email %>">
       </div>
       <div class="input-row">
         <label>Address</label>
